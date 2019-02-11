@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="head">
+    <p><strong>{{ Title }}</strong></p>
+    <p><strong>{{ Tanggal | date:"fullDate" }}</strong></p>
+  </div>
+
+  <div class="content">
+    <p><strong>{{ "Nama: "+ Nama }}</strong></p>
+    <p><strong>{{ "Alamat: "+ Alamat }}</strong></p>
+    <p><strong>Hobby Saya</strong></p>
+    <table>
+      <tr>
+        <th>No.</th>
+        <th>Hobby</th>
+        <th>Keterangan</th>
+      </tr>
+      <tr *ngFor="let Hobby of Hobbies">
+        <td>{{ Hobby.id }}</td>
+        <td>{{ Hobby.hobby }}</td>
+        <td>{{ Hobby.ket }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
